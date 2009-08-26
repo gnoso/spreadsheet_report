@@ -1,0 +1,22 @@
+PKG_VERSION = "0.0.3"
+
+Gem::Specification.new do |s|
+  
+  s.name = 'spreadsheet_report'
+  s.version = PKG_VERSION
+  s.platform = Gem::Platform::RUBY
+  s.summary = <<-DESC.strip.gsub(/\n\s+/, " ")
+    Simple tool for running queries against ActiveRecord and putting them
+    into a Google Spreadsheet.
+  DESC
+
+  s.files = Dir.glob("{lib}/**/*")
+  s.require_path = ''
+  s.has_rdoc = true
+
+  s.author = "Gnoso, Inc."
+  s.email = "alan@gnoso.com"
+  s.homepage = "http://www.gnoso.com"
+  
+  s.add_dependency "google-spreadsheet-ruby", ">= 0.0.3"
+end

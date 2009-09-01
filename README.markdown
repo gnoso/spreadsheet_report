@@ -6,15 +6,13 @@ Spreadsheet Report is a simple tool for dumping SQL data into Google Spreadsheet
 Installation
 ------------
 
-Spreadsheet Report depends on the google-spreadsheet-ruby gem, and only an old version is hosted on github, so you'll need to install it separately:
+Spreadsheet Report depends on a fork of google-spreadsheet-ruby gem:
 
-gem install google-spreadsheet-ruby
+gem install commondream-google-spreadsheet-ruby
 
-Then, install spreadsheet_report with:
+We're hosting spreadsheet_report's gem on Gemcutter, so you'll need to be set up with them. Find out more at http://gemcutter.org. Once you're set up with Gemcutter, install spreadsheet_report with:
 
-gem install gnoso-spreadsheet_report
-
-You'll need github to be in your sources list.
+gem install spreadsheet_report
 
 Usage
 -----

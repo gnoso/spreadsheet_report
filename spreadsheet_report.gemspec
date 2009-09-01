@@ -11,12 +11,12 @@ Gem::Specification.new do |s|
   DESC
 
   s.files = Dir.glob("{lib}/**/*")
-  s.require_path = ''
+  s.require_path = 'lib'
   s.has_rdoc = true
 
   s.author = "Gnoso, Inc."
   s.email = "alan@gnoso.com"
   s.homepage = "http://www.gnoso.com"
   
-  s.add_dependency "google-spreadsheet-ruby", ">= 0.0.3"
+  s.add_dependency "commondream-google-spreadsheet-ruby", ">= 0.0.4"
 end

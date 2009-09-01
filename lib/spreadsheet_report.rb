@@ -1,5 +1,4 @@
 require 'google_spreadsheet'
-require 'ruby-debug'
 
 class SpreadsheetReport
   

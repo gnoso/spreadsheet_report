@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
     into a Google Spreadsheet.
   DESC
 
-  s.files = Dir.glob("{lib}/**/*")
+  s.files = ['lib/spreadsheet_report.rb']
   s.require_path = 'lib'
   s.has_rdoc = true
 

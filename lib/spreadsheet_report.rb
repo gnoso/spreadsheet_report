@@ -18,8 +18,6 @@ class SpreadsheetReport
       worksheet = nil
     end
 
-
-    
     # run the query
     result = ActiveRecord::Base.connection.select_all(query)
     
@@ -43,6 +41,10 @@ class SpreadsheetReport
         worksheet[current_row, index + 1] = row_data[key]
       end
       current_row += 1
+      
+      if current_row % 250 == 0
+        worksheet.save
+      end
     end
     
     worksheet.save

@@ -1,4 +1,4 @@
-PKG_VERSION = "0.0.4"
+PKG_VERSION = "0.0.5"
 
 Gem::Specification.new do |s|
   

@@ -1,22 +1,25 @@
-PKG_VERSION = "0.0.6"
+# coding: utf-8
+lib = File.expand_path('../lib', __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+require 'spreadsheet_report/version'
 
-Gem::Specification.new do |s|
+Gem::Specification.new do |spec|
+  spec.name          = "spreadsheet_report"
+  spec.version       = SpreadsheetReport::VERSION
+  spec.authors       = ["Alan Johnson", "Taylor Shuler"]
+  spec.email         = ["alan@gnoso.com", "taylorshuler@aol.com"]
+  spec.description   = %q{Spreadsheet_report is a simple tool for dumping SQL data into Google Spreadsheets.}
+  spec.summary       = %q{A simple tool for dumping SQL data into Google Spreadsheets.}
+  spec.homepage      = "https://github.com/gnoso/spreadsheet_report"
+  spec.license       = "MIT"
+
+  spec.files         = `git ls-files`.split($/)
+  spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
+  spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
+  spec.require_paths = ["lib"]
   
-  s.name = 'spreadsheet_report'
-  s.version = PKG_VERSION
-  s.platform = Gem::Platform::RUBY
-  s.summary = <<-DESC.strip.gsub(/\n\s+/, " ")
-    Simple tool for running queries against ActiveRecord and putting them
-    into a Google Spreadsheet.
-  DESC
+  spec.add_dependency "commondream-google-spreadsheet-ruby", ">= 0.0.4"
 
-  s.files = ['lib/spreadsheet_report.rb']
-  s.require_path = 'lib'
-  s.has_rdoc = true
-
-  s.author = "Gnoso, Inc."
-  s.email = "alan@gnoso.com"
-  s.homepage = "http://www.gnoso.com"
-  
-  s.add_dependency "commondream-google-spreadsheet-ruby", ">= 0.0.4"
+  spec.add_development_dependency "bundler", "~> 1.3"
+  spec.add_development_dependency "rake"
 end

@@ -1,4 +1,6 @@
 # Files
+.DS_Store
+.project
   ## Any files w/ these extensions:
     *.gem
     *.rbc

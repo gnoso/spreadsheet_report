@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.description   = %q{Spreadsheet_report is a simple tool for dumping SQL data into Google Spreadsheets.}
   spec.summary       = %q{A simple tool for dumping SQL data into Google Spreadsheets.}
   spec.homepage      = "https://github.com/gnoso/spreadsheet_report"
-  spec.license       = "MIT"
+  spec.license       = "Apache License 2.0"
 
   spec.files         = `git ls-files`.split($/)
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
